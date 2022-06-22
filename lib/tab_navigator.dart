@@ -21,19 +21,25 @@ class _TabNavigatorState extends State<TabNavigator> {
     return Scaffold(
       body: PageView(
         controller: _controller,
-        children: <Widget>[
+        scrollDirection: Axis.horizontal,
+        children: const <Widget>[
           ChatPage(),
           ContactsPage(),
           DiscoveryPage(),
           MinePage(),
         ],
+        onPageChanged: (position) {
+          setState(() {
+            _currentIndex = position;
+          });
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) {
-          _controller.jumpToPage(index);
           setState(() {
             _currentIndex = index;
+            _controller.animateToPage(_currentIndex, duration: Duration(milliseconds:200), curve: Curves.ease);
           });
         },
         type: BottomNavigationBarType.fixed,
