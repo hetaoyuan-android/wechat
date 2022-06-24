@@ -29,14 +29,61 @@ class _MinePage extends State<MinePage> {
                 children: [
                   _headerWidget(),
                   Column(
-                    children: const [
-                      SizedBox(
+                    children:  [
+                      const SizedBox(
                         height: 10,
                       ),
-                      CellItem(
+                      const CellItem(
                         imageName: 'images/微信支付.png',
                         title: '支付',
-                      )
+                      ),
+                      const SizedBox(height: 10,),
+                      const CellItem(
+                        imageName: 'images/微信收藏.png',
+                        title: '收藏',
+                      ),
+                     Row(
+                        children: [
+                          Container(width: 50, height: 0.5, color: Colors.white),
+                        ],
+                      ),
+                      const CellItem(
+                        imageName: 'images/微信相册.png',
+                        title: '相册',
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Container(width: 50, height: 0.5, color: Colors.white),
+                          Container(height: 0.5, color: Colors.grey)
+                        ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Container(width: 50, height: 0.5, color: Colors.white),
+                          Container(height: 0.5, color: Colors.grey)
+                        ],
+                      ),
+                      const CellItem(
+                        imageName: 'images/微信卡包.png',
+                        title: '卡包',
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Container(width: 50, height: 0.5, color: Colors.white),
+                          Container(height: 0.5, color: Colors.grey)
+                        ],
+                      ),
+                      const CellItem(
+                        imageName: 'images/微信表情.png',
+                        title: '表情',
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const CellItem(
+                        imageName: 'images/微信设置.png',
+                        title: '设置',
+                      ),
                     ],
                   )
                 ],
