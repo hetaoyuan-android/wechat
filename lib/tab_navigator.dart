@@ -24,7 +24,7 @@ class _TabNavigatorState extends State<TabNavigator> {
         scrollDirection: Axis.horizontal,
         children: const <Widget>[
           ChatPage(),
-          ContactsPage(),
+          FriendsPage(),
           DiscoveryPage(),
           MinePage(),
         ],

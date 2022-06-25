@@ -24,13 +24,13 @@ class _DiscoveryPage extends State<DiscoveryPage> {
         elevation: 0.0, //导航栏底部边栏，这样设置就没有底部的黑线了
         actions: [
           IconButton(
-            icon: const Icon(Icons.search, size: 30,),
+            icon: const Icon(Icons.search_sharp, size: 30,),
             onPressed: (){
               print('search');
             },
           ),
           IconButton(
-            icon: const Icon(Icons.add, size: 30,),
+            icon: const Icon(Icons.add_circle_outline, size: 30,),
             onPressed: (){
               print('add');
             },
