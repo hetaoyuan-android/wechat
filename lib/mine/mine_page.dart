@@ -80,6 +80,7 @@ class _MinePage extends State<MinePage> {
                       const SizedBox(
                         height: 10,
                       ),
+
                       const CellItem(
                         imageName: 'images/微信设置.png',
                         title: '设置',
