@@ -5,8 +5,9 @@ class Wechat {
   final String? imageUrl;//图片 URL
   final String? name;//好友名称
   final String? content;
+  final String? friendImageUrl;
   //构造方法
-  Wechat({this.imageUrl,this.name,this.content});
+  Wechat({this.imageUrl,this.name,this.content, this.friendImageUrl});
 }
 //好友列表
 List <Wechat> weChatDatas =
@@ -14,7 +15,9 @@ List <Wechat> weChatDatas =
   Wechat(
       imageUrl: 'https://randomuser.me/api/portraits/women/27.jpg',
       name: 'Lina',
-      content: '洞庭西望楚江分，水尽南天不见云'
+      content: '洞庭西望楚江分，水尽南天不见云',
+      friendImageUrl: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201911%2F25%2F20191125012222_hnhlu.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660056725&t=aca016bd932a1454de4133c6bca08c6c',
+
   ),
   Wechat(
       imageUrl: 'https://randomuser.me/api/portraits/women/17.jpg',

@@ -27,6 +27,12 @@ class _ChatPage extends State<ChatPage> {
           centerTitle: true,
           title: const Text("微信", style: TextStyle(color: Colors.black),),
           actions: [
+            IconButton(
+              icon: const Icon(Icons.search_sharp, size: 30,),
+              onPressed: (){
+                print('search');
+              },
+            ),
             Container(
               margin: const EdgeInsets.only(right: 10),
               child: PopupMenuButton(
@@ -51,7 +57,6 @@ class _ChatPage extends State<ChatPage> {
         ),
         body: ListView.builder(
             itemCount: listDatas.length,
-
             itemBuilder: _chatItem)
     );
   }

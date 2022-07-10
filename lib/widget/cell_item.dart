@@ -1,23 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:wechat/discovery/circle_friends.dart';
 
+typedef _CallBack = void Function();
 class CellItem extends StatelessWidget {
   final String? title;
   final String? subTitle;
   final String? imageName;
   final String? subBigImageName;
   final String? subImageName;
+  final VoidCallback? onPressFunction;
 
   const CellItem(
-      {this.title,
+      {Key? key, this.title,
       this.subTitle,
       this.imageName,
       this.subBigImageName,
-      this.subImageName});
+      this.subImageName,
+      this.onPressFunction}): super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        print("--title $title");
+        if (title?.compareTo("朋友圈") == 0) {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext context) =>
+                  const CircleFriends()));
+        }
+      },
       child: Container(
         color: Colors.white,
         height: 64,

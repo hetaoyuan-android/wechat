@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:wechat/discovery/circle_friends.dart';
 import 'package:wechat/utils/common.dart';
 import 'package:wechat/widget/cell_item.dart';
 
@@ -8,7 +8,6 @@ class DiscoveryPage extends StatefulWidget {
 
   @override
   _DiscoveryPage createState() => _DiscoveryPage();
-
 }
 
 class _DiscoveryPage extends State<DiscoveryPage> {
@@ -24,22 +23,27 @@ class _DiscoveryPage extends State<DiscoveryPage> {
         elevation: 0.0, //导航栏底部边栏，这样设置就没有底部的黑线了
         actions: [
           IconButton(
-            icon: const Icon(Icons.search_sharp, size: 30,),
-            onPressed: (){
+            icon: const Icon(
+              Icons.search_sharp,
+              size: 30,
+            ),
+            onPressed: () {
               print('search');
             },
           ),
           IconButton(
-            icon: const Icon(Icons.add_circle_outline, size: 30,),
-            onPressed: (){
+            icon: const Icon(
+              Icons.add_circle_outline,
+              size: 30,
+            ),
+            onPressed: () {
               print('add');
             },
           ),
         ],
       ),
-      body:Container(
+      body: Container(
         color: GlobalThemeColor,
-        height: 800,
         child: ListView(
           children: <Widget>[
             //朋友圈
@@ -48,6 +52,7 @@ class _DiscoveryPage extends State<DiscoveryPage> {
               title: '朋友圈',
               subBigImageName: "images/avatar.jpeg",
             ),
+
             //间隔
             const SizedBox(
               height: 10,
@@ -117,7 +122,7 @@ class _DiscoveryPage extends State<DiscoveryPage> {
               imageName: 'images/游戏.png',
               title: '游戏',
             ),
-            const  SizedBox(
+            const SizedBox(
               height: 10,
             ),
             //小程序

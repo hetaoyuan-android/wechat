@@ -3,7 +3,7 @@
    <application
         android:label="wechat"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/wechat">
         <activity
             android:name=".MainActivity"
             android:exported="true"

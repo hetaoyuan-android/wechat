@@ -26,5 +26,6 @@ flutter:
 
   assets:
     - images/
+    - images/friend_bg.png
 
 
